@@ -39,6 +39,6 @@ app.post('/submit-contact', async (req, res) => {
         res.status(500).send('Form submission failed'); // Send an error response
     }
 });
-app.listen(port,(req,res)=>{
+app.listen(process.env.PORT || '3000',(req,res)=>{
     console.log("server running on port",3000);
 });
